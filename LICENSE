@@ -1,0 +1,35 @@
+Glowlyrics License
+
+Copyright (c) 2026 Ayan Jain. All rights reserved.
+
+Glowlyrics (the "Software") is free to download, install and use on your own
+Mac for personal, non-commercial purposes, under these terms.
+
+You MAY:
+  - download the Software from its official GitHub releases page,
+    https://github.com/imayanjain/glowlyrics/releases
+  - install it and use it on Macs you own or control, for personal use.
+
+You MAY NOT, without prior written permission from the copyright holder:
+  - copy, modify, adapt, translate or create derivative works of the
+    Software or any part of it, including its source code, design,
+    lyric styles, artwork and documentation;
+  - reuse any part of the Software's code in another project;
+  - redistribute, publish, share, sell, rent, sublicense or host the
+    Software or any modified version of it, or bundle it with other software;
+  - use the Software, or any part of it, for commercial purposes;
+  - remove or alter this license or any copyright notice.
+
+Third-party components that the Software installs or uses (such as
+Hammerspoon, BlackHole, Python and its packages) are covered by their own
+licenses. Lyrics are fetched from lrclib.net and remain the property of their
+respective owners.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF
+OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+For permissions beyond this license, contact the author through GitHub:
+https://github.com/imayanjain
