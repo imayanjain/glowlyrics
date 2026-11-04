@@ -13,7 +13,7 @@ Free for personal use.
 [![Apple Music](https://img.shields.io/badge/Apple%20Music-synced%20lyrics-fa2d48?logo=applemusic&logoColor=white)](#lyrics)
 [![Latest release](https://img.shields.io/github/v/release/imayanjain/glowlyrics?color=3c78e6)](https://github.com/imayanjain/glowlyrics/releases/latest)
 
-<img src="docs/demo.gif" alt="Glowlyrics immersive mode cycling through the Flow, Pop, Speaker, Poster and Warp lyric styles" width="720">
+<img src="docs/demo.gif" alt="Glowlyrics immersive mode cycling through the Flow, Pop, Speaker, Poster and Gramophone lyric styles" width="720">
 
 [Install](#install) · [Features](#features) · [Shortcuts](#shortcuts) · [FAQ](#faq-and-troubleshooting) · [Releases](https://github.com/imayanjain/glowlyrics/releases)
 
@@ -21,9 +21,10 @@ Free for personal use.
 
 | | |
 |---|---|
-| ![Flow style](docs/full-flow.png) | ![Speaker style](docs/full-speaker.png) |
-| ![Warp style](docs/full-warp.png) | ![Poster style](docs/full-poster.png) |
-| ![StandBy view](docs/standby-pop.png) | ![Mini player](docs/mini-flow.png) |
+| ![Flow style](docs/full-flow.png) | ![Poster style](docs/full-poster.png) |
+| ![Gramophone style: drag the record onto the player](docs/full-gramophone-setup.png) | ![Gramophone style playing](docs/full-gramophone.png) |
+| ![Pop style](docs/full-pop.png) | ![Speaker style](docs/full-speaker.png) |
+| ![StandBy view](docs/standby-pop.png) | ![Mini player](docs/mini-poster.png) |
 
 *Screenshots and demo use a made-up track and made-up lyrics.*
 
@@ -42,12 +43,12 @@ Free for personal use.
 - Speaker-delay correction for Bluetooth speakers, plus per-song timing nudges that are remembered.
 
 **Immersive mode** (⌘⌥L)
-- Five lyric styles:
+- Five lyric styles (keys `1`–`5`):
   - **Flow**: scrolling lines with a gradient sweep
-  - **Pop**: words bounce in to the beat
-  - **Speaker**: kinetic typography on a frosted panel
-  - **Poster**: big type layouts
-  - **Warp**: a starfield with lines flying in
+  - **Pop**: one word at a time, and each word enters by what it is: short words punch in, line endings drop, held notes stretch for as long as they're sung, and stressed words burst with confetti. The next word waits underneath so a room can sing along.
+  - **Speaker**: kinetic typography on a frosted sheet that fills the whole screen
+  - **Poster**: every line is printed as its own poster, with type fitted to the page, colour fields, a grid and the track credits. Verses print dark, the chorus prints on paper, and instrumentals get their own sheet showing the next line.
+  - **Gramophone**: every song starts with the setup. The player is empty, the arm is parked and the song's record waits beside it: drag it onto the player (or click it), the arm swings over and the needle drops. Then it comes alive: the record breathes with the bass, kicks send shockwaves, the grooves ripple with the mids, highs throw sparks and the singer's voice lights the label. If nobody drags it, the record drops in by itself after a few seconds.
 - Three views:
   - **Full**: fills the screen
   - **Glass**: see-through, so you can still see your windows behind it
@@ -56,12 +57,16 @@ Free for personal use.
 - Seek bar, previous/play/next, volume and boost. The controls hide when you're idle and come back when you move the mouse or scroll.
 - Search your library or the whole Apple Music catalog, and pick a song to play it right away without leaving the view.
 - **Up Next queue**: press ＋ (or Shift+Enter) on any search result to queue it. Queued songs play in order when the current song ends, and Next jumps straight to them. Open search to see, reorder by playing, or remove what's queued.
+- **Favourite** the song that's playing with the ♡ button (or `F`, or ⌘⌥F from anywhere). It's the same Favourite you see in Music.
+- **Add to playlist** with the playlist button (or `P`): pick one of your playlists, search them, or type a name to make a new one. Apple Music songs you're streaming are added to your library first, the same way Music does it.
+- The animations follow the music itself: Glowlyrics splits the sound into bass, mids, highs and voice, and times them to your speaker.
 - It doesn't take keyboard focus, so typing in other apps never pauses your music.
 
 **Sound**
 - Speaker fallback: if your Bluetooth speaker disconnects while a Multi-Output Device is selected (where macOS would leave you with silence), Glowlyrics switches to the MacBook speakers and mic, then back to your setup when the speaker reconnects.
 - Pause for voice and calls: when Siri, a voice assistant, dictation or a call starts using the mic, the music pauses. When the mic closes, it picks up where it left off.
 - A volume booster (+3, +6, +9 or +12 dB) for everything your Mac plays, with a limiter so loud parts don't clip.
+- **Karaoke** (the mic chip in immersive, `K`, or ⌘⌥K): turns the singer down live so you can sing over the song. Choose **Light** (the singer stays as a quiet guide), **Medium** or **Strong**. Only the voice's range is touched, and the level is given back so the band stays loud. It works best on songs where the lead vocal is in the middle of the mix; reverb and backing vocals stay. Needs BlackHole, like Boost.
 
 **Settings** (⌘⌥P)
 - One panel for all of the above.
@@ -72,7 +77,7 @@ Free for personal use.
 - Apple Music, the Music app. Playing catalog songs needs an Apple Music subscription.
 - [Homebrew](https://brew.sh)
 - Python 3. Glowlyrics uses whichever install already has its packages: Homebrew, python.org or the system `/usr/bin/python3`.
-- Optional: an external display, a Bluetooth speaker and BlackHole (for beat sync and boost). Everything else works without them.
+- Optional: an external display, a Bluetooth speaker and BlackHole (for beat sync, the music-reactive animations, Boost and Karaoke). Everything else works without them.
 
 ## Install
 
@@ -100,10 +105,12 @@ If BlackHole was just installed, restart your Mac once first. Without these step
 | ⌘⌥L | Open or close immersive mode |
 | ⌘⌥M | Mini player: open it, or slide between Mini and full screen |
 | ⌘⌥P | Settings |
+| ⌘⌥F | Favourite the song that's playing |
+| ⌘⌥K | Karaoke on / off |
 | ⌘⌥[  /  ⌘⌥] | Lyrics earlier / later (saved per song) |
 | ⌘⌥↑  /  ⌘⌥↓ | Volume |
 
-Inside immersive mode (click it first): Space play/pause, ← → seek, ↑ ↓ volume, `1`–`5` style, `V` view, `/` search, Esc close.
+Inside immersive mode (click it first): Space play/pause, ← → seek, ↑ ↓ volume, `1`–`5` style (Flow, Pop, Speaker, Poster, Gramophone), `V` view, `/` search, `F` favourite, `P` add to playlist, `K` karaoke, Esc close.
 
 In search: Enter plays now, Shift+Enter adds to Up Next, ↑ ↓ move through results.
 
@@ -121,7 +128,13 @@ Logs go to `hammerspoon.log` and `engine.log` in your Glowlyrics folder (menu ba
 
 **The glow doesn't pulse with the beat.** Beat sync needs BlackHole and a Multi-Output Device (step 4 of the setup). Without them the glow still follows the album colors.
 
-**Boost says it needs BlackHole.** Same fix: install BlackHole and restart your Mac once.
+**Boost or Karaoke says it needs BlackHole.** Same fix: install BlackHole and restart your Mac once.
+
+**The animations look flat (the Gramophone record doesn't move, Pop doesn't shake).** They react to the sound going through BlackHole. Choose **Multi-Output Device** as your Sound output, or turn on Karaoke or Boost, which route the sound through it for you.
+
+**Karaoke still lets me hear the singer.** Try **Strong**. Glowlyrics removes what sits in the centre of the mix in the voice's range, live, without an AI model, so reverb, backing vocals and voices recorded in stereo stay audible. If the song sounds thin, go back to **Light**.
+
+**Add to playlist says it couldn't add the song.** The reason is in `hammerspoon.log`. Streaming songs are added to your library first; if your library doesn't sync (Sync Library is off in Music's settings), Music can't do that.
 
 **Does it work with Spotify?** Not yet. It works with Apple Music. If you'd like Spotify support, say so in [Discussions](https://github.com/imayanjain/glowlyrics/discussions).
 
@@ -131,7 +144,7 @@ Logs go to `hammerspoon.log` and `engine.log` in your Glowlyrics folder (menu ba
 
 ## Privacy
 
-Glowlyrics runs entirely on your Mac. It sends the song title and artist to lrclib.net to fetch lyrics, and your search text to Apple's iTunes Search API when you search the catalog. Nothing else leaves your Mac, and there's no tracking or analytics.
+Glowlyrics runs entirely on your Mac, including Karaoke and the music analysis behind the animations. It sends the song title and artist to lrclib.net to fetch lyrics, and your search text to Apple's iTunes Search API when you search the catalog. Nothing else leaves your Mac, and there's no tracking or analytics.
 
 ## Uninstall
 

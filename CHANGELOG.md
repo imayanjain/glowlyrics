@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0 (2026-11-05)
+
+- New **Gramophone** style (replaces Warp): every song starts with dragging the record onto the player, then the record, shockwaves, grooves and sparks react to the music
+- New **Poster** style: each line printed as its own poster, with fitted type, colour fields and credits; the chorus prints on paper
+- **Pop** redesigned: each word enters by what it is (punch, drop, stretch on held notes, burst on stressed words) and the next word is shown to sing along
+- **Speaker** now fills the whole screen
+- Animations react to bass, mids, highs and voice, timed to your speaker
+- **Favourite** the playing song from immersive mode (♡, `F`, ⌘⌥F)
+- **Add to playlist** from immersive mode (`P`), including new playlists; streaming songs are added to your library first
+- **Karaoke**: turn the singer down live with Light, Medium and Strong levels (`K`, ⌘⌥K)
+
 ## 1.0.0 (2026-10-31)
 
 First public release.
