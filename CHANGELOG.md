@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.0 (2026-11-26)
+
+- New **Crate** style (key `5`, replaces Gramophone): your Liked songs and library as record spines on a shelf. Pull a record, drop it on the turntable and it plays; drag the tonearm to seek, tap the record to pause
+- New **Constellation** style (key `6`): every sung word becomes a star, and each line forms its own constellation. `G` toggles the album-coloured edge light
+- New **Pulse** edge-glow animation: equalizer halo, kick shockwaves and comets that run one lap per bar
+- **Background play**: songs picked in search, Up Next or Crate start without Apple Music coming to the front
+- **Smoother**: every command to Music runs in the background, so lyrics and animations no longer freeze; repeated seeks and volume drags send only the latest value
+- **Lighter on your Mac**: the edge glow pauses behind full-screen immersive, the beat is smoothed every frame, and nothing on screen is redrawn unless it changed
+- Favourite no longer stalls the app when a song changes
+
 ## 1.1.0 (2026-11-05)
 
 - New **Gramophone** style (replaces Warp): every song starts with dragging the record onto the player, then the record, shockwaves, grooves and sparks react to the music

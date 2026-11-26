@@ -13,7 +13,7 @@ Free for personal use.
 [![Apple Music](https://img.shields.io/badge/Apple%20Music-synced%20lyrics-fa2d48?logo=applemusic&logoColor=white)](#lyrics)
 [![Latest release](https://img.shields.io/github/v/release/imayanjain/glowlyrics?color=3c78e6)](https://github.com/imayanjain/glowlyrics/releases/latest)
 
-<img src="docs/demo.gif" alt="Glowlyrics immersive mode cycling through the Flow, Pop, Speaker, Poster and Gramophone lyric styles" width="720">
+<img src="docs/demo.gif" alt="Glowlyrics immersive mode cycling through its lyric styles" width="720">
 
 [Install](#install) · [Features](#features) · [Shortcuts](#shortcuts) · [FAQ](#faq-and-troubleshooting) · [Releases](https://github.com/imayanjain/glowlyrics/releases)
 
@@ -22,7 +22,6 @@ Free for personal use.
 | | |
 |---|---|
 | ![Flow style](docs/full-flow.png) | ![Poster style](docs/full-poster.png) |
-| ![Gramophone style: drag the record onto the player](docs/full-gramophone-setup.png) | ![Gramophone style playing](docs/full-gramophone.png) |
 | ![Pop style](docs/full-pop.png) | ![Speaker style](docs/full-speaker.png) |
 | ![StandBy view](docs/standby-pop.png) | ![Mini player](docs/mini-poster.png) |
 
@@ -32,7 +31,8 @@ Free for personal use.
 
 **Edge glow**
 - A soft rim light around every connected display. It runs as one continuous gradient across a laptop and an external monitor.
-- Four animations: Static, Breathe, Flow (the gradient drifts around the rim) and Chase (light runs along the edges).
+- Five animations: Static, Breathe, Flow (the gradient drifts around the rim), Chase (light runs along the edges) and Pulse (an album-coloured equalizer halo around the screen, a shockwave on every kick, and two comets running one lap per bar).
+- The glow stops redrawing while full-screen immersive mode covers it, so it costs nothing when you can't see it.
 - Colors come from the current album art, a preset, or two custom colors.
 - Music Sync: the glow pulses on kicks, using live audio analysis.
 
@@ -43,23 +43,25 @@ Free for personal use.
 - Speaker-delay correction for Bluetooth speakers, plus per-song timing nudges that are remembered.
 
 **Immersive mode** (⌘⌥L)
-- Five lyric styles (keys `1`–`5`):
+- Six lyric styles (keys `1`–`6`):
   - **Flow**: scrolling lines with a gradient sweep
   - **Pop**: one word at a time, and each word enters by what it is: short words punch in, line endings drop, held notes stretch for as long as they're sung, and stressed words burst with confetti. The next word waits underneath so a room can sing along.
   - **Speaker**: kinetic typography on a frosted sheet that fills the whole screen
   - **Poster**: every line is printed as its own poster, with type fitted to the page, colour fields, a grid and the track credits. Verses print dark, the chorus prints on paper, and instrumentals get their own sheet showing the next line.
-  - **Gramophone**: every song starts with the setup. The player is empty, the arm is parked and the song's record waits beside it: drag it onto the player (or click it), the arm swings over and the needle drops. Then it comes alive: the record breathes with the bass, kicks send shockwaves, the grooves ripple with the mids, highs throw sparks and the singer's voice lights the label. If nobody drags it, the record drops in by itself after a few seconds.
+  - **Crate**: a record shop on your screen. Your Liked songs, and your whole library, stand on a shelf along the bottom as record spines. Click a spine to pull the record, drag it onto the turntable (or press Drop the needle) and it plays. The deck spins at 33 1/3, the tonearm travels from the outer groove to the label as the song plays (drag it to seek), tap the record to pause, and the lyrics sing along beside it. Songs you favourite go to the front of the Liked shelf straight away.
+  - **Constellation**: every sung word becomes a star. Stars join into a constellation as the line is sung, the word being sung swells inside an orbit ring that fills with the voice, and when the next line starts the old constellation dissolves while a new one forms. Press `G` to turn the album-coloured edge light on or off.
 - Three views:
   - **Full**: fills the screen
   - **Glass**: see-through, so you can still see your windows behind it
   - **StandBy**: a large clock with now playing, which turns on automatically after a few idle minutes
 - **Mini player** (⌘⌥M): immersive slides down into a small floating window that stays on top while you work, which is handy if you only have one screen. Drag it anywhere (it snaps to the edges), and double-click it or press ⌘⌥M to slide back to full screen. When you step away it opens StandBy, then slides back to Mini when you return.
 - Seek bar, previous/play/next, volume and boost. The controls hide when you're idle and come back when you move the mouse or scroll.
-- Search your library or the whole Apple Music catalog, and pick a song to play it right away without leaving the view.
+- Search your library or the whole Apple Music catalog, and pick a song to play it right away without leaving the view. Songs start in the background: Apple Music never jumps to the front.
 - **Up Next queue**: press ＋ (or Shift+Enter) on any search result to queue it. Queued songs play in order when the current song ends, and Next jumps straight to them. Open search to see, reorder by playing, or remove what's queued.
 - **Favourite** the song that's playing with the ♡ button (or `F`, or ⌘⌥F from anywhere). It's the same Favourite you see in Music.
 - **Add to playlist** with the playlist button (or `P`): pick one of your playlists, search them, or type a name to make a new one. Apple Music songs you're streaming are added to your library first, the same way Music does it.
 - The animations follow the music itself: Glowlyrics splits the sound into bass, mids, highs and voice, and times them to your speaker.
+- Play, pause, seek and volume answer instantly. Commands to Music run in the background, so the lyrics and animations never freeze while Music responds.
 - It doesn't take keyboard focus, so typing in other apps never pauses your music.
 
 **Sound**
@@ -110,7 +112,7 @@ If BlackHole was just installed, restart your Mac once first. Without these step
 | ⌘⌥[  /  ⌘⌥] | Lyrics earlier / later (saved per song) |
 | ⌘⌥↑  /  ⌘⌥↓ | Volume |
 
-Inside immersive mode (click it first): Space play/pause, ← → seek, ↑ ↓ volume, `1`–`5` style (Flow, Pop, Speaker, Poster, Gramophone), `V` view, `/` search, `F` favourite, `P` add to playlist, `K` karaoke, Esc close.
+Inside immersive mode (click it first): Space play/pause, ← → seek, ↑ ↓ volume, `1`–`6` style (Flow, Pop, Speaker, Poster, Crate, Constellation), `V` view, `G` edge light, `/` search, `F` favourite, `P` add to playlist, `K` karaoke, Esc close.
 
 In search: Enter plays now, Shift+Enter adds to Up Next, ↑ ↓ move through results.
 
@@ -130,7 +132,7 @@ Logs go to `hammerspoon.log` and `engine.log` in your Glowlyrics folder (menu ba
 
 **Boost or Karaoke says it needs BlackHole.** Same fix: install BlackHole and restart your Mac once.
 
-**The animations look flat (the Gramophone record doesn't move, Pop doesn't shake).** They react to the sound going through BlackHole. Choose **Multi-Output Device** as your Sound output, or turn on Karaoke or Boost, which route the sound through it for you.
+**The animations look flat (the Crate record doesn't react, Pop doesn't shake).** They react to the sound going through BlackHole. Choose **Multi-Output Device** as your Sound output, or turn on Karaoke or Boost, which route the sound through it for you.
 
 **Karaoke still lets me hear the singer.** Try **Strong**. Glowlyrics removes what sits in the centre of the mix in the voice's range, live, without an AI model, so reverb, backing vocals and voices recorded in stereo stay audible. If the song sounds thin, go back to **Light**.
 
